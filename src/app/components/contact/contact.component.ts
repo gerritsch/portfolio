@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ export class ContactComponent implements OnInit {
     message: new FormControl('')
   });
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private toastr: ToastrService) {}
 
   onSubmit() {
     const body = new HttpParams()
@@ -31,14 +32,15 @@ export class ContactComponent implements OnInit {
         err => {
           if (err instanceof ErrorEvent) {
             //client side error
-            alert('Something went wrong when sending your message.');
+            this.toastr.error('Something went wrong when sending your message.');
             console.log(err.error.message);
           } else {
             //backend error. If status is 200, then the message successfully sent
             if (err.status === 200) {
+              this.toastr.success('Successfully send your message.');
               alert('Your message has been sent!');
             } else {
-              alert('Something went wrong when sending your message.');
+              this.toastr.error('Something went wrong when sending your message.');
               console.log('Error status:');
               console.log(err.status);
               console.log('Error body:');
