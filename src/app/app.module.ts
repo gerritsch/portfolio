@@ -16,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ContactComponent } from './components/contact/contact.component';
 import { ToastrModule } from 'ngx-toastr';
+import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.component';
+import { ImprintComponent } from './pages/imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ToastrModule } from 'ngx-toastr';
     AboutComponent,
     SkillsComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    DataPrivacyComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,
