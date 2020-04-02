@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 
@@ -12,9 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 export class ContactComponent implements OnInit {
   faPaperPlane = faPaperPlane;
   contactForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl('')
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required])
   });
 
   constructor(private http: HttpClient, private toastr: ToastrService) {}

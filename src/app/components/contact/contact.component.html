@@ -17,11 +17,11 @@
             <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
           </p>
           <div class="form-group">
-            <label for="inputName">Name</label>
-            <input name="name" type="email" class="form-control" id="inputName" formControlName="name" required />
+            <label for="inputName">Name <span class="required">*</span></label>
+            <input name="name" type="text" class="form-control" id="inputName" formControlName="name" required />
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">E-Mail</label>
+            <label for="exampleInputEmail1">E-Mail <span class="required">*</span></label>
             <input
               name="email"
               type="email"
@@ -34,7 +34,7 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Message</label>
+            <label for="exampleFormControlTextarea1">Message <span class="required">*</span></label>
             <textarea
               name="message"
               class="form-control"
@@ -44,8 +44,9 @@
               required
             ></textarea>
           </div>
+          <p><span class="required">*</span> Required field</p>
           <p id="button-row">
-            <button id="submit-button" type="submit" class="btn">
+            <button id="submit-button" type="submit" class="btn" [attr.disabled]="contactForm.invalid ? '' : null">
               <fa-icon [icon]="faPaperPlane" size="lg" style="color: white;"></fa-icon> Send E-Mail
             </button>
           </p>

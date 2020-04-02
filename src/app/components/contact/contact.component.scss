@@ -1,0 +1,18 @@
+.ng-valid {
+  border-color: green;
+}
+.ng-invalid {
+  .ng-touched {
+    border-color: red;
+  }
+}
+
+.required {
+  color: red;
+}
+
+form {
+  p {
+    font-size: 14px;
+  }
+}
