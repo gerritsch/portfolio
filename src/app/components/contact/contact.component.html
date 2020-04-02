@@ -16,16 +16,34 @@
           <p style="display: none;">
             <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
           </p>
-          <p class="form-row">
-            <label>Your Name: </label><input type="text" name="name" formControlName="name" required />
-          </p>
-          <p class="form-row">
-            <label>Email Address: </label><input type="email" name="email" formControlName="email" required />
-          </p>
-          <p class="form-row">
-            <label>Your Message: </label
-            ><textarea id="message" name="message" formControlName="message" required></textarea>
-          </p>
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input name="name" type="email" class="form-control" id="inputName" formControlName="name" required />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">E-Mail</label>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              formControlName="email"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea
+              name="message"
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              formControlName="message"
+              required
+            ></textarea>
+          </div>
           <p id="button-row">
             <button id="submit-button" type="submit" class="btn">
               <fa-icon [icon]="faPaperPlane" size="lg" style="color: white;"></fa-icon> Send E-Mail
