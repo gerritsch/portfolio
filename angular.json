@@ -35,12 +35,9 @@
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "../node_modules/cookieconsent/build/cookieconsent.min.css"
+              "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
-            "scripts": [
-              "node_modules/chart.js/dist/Chart.js",
-              "../node_modules/cookieconsent/build/cookieconsent.min.js"
-            ]
+            "scripts": ["node_modules/chart.js/dist/Chart.js", "node_modules/cookieconsent/build/cookieconsent.min.js"]
           },
           "configurations": {
             "de": {
