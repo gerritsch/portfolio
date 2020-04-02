@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -13,21 +14,14 @@ export class SkillsComponent implements OnInit {
     link: string;
   }[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
     this.projects.push({
-      name: 'OAuth2 Authentication Server & Dashboard',
-      description:
-        'A simple OAuth2 Authentication Server which provides the Authorization Code Grant with/out PKCE Extension and Resource Owner Password Credentials Grant. The Dashboard features the registration of developer accout which can create new client credentials to add the OAuth2 Authentication Server to their applications.',
-      usedTechnologies: ['NestJS', 'NodeJS', 'TypeScript', 'Angular', 'SCSS'],
-      link: '#'
-    });
-
-    this.projects.push({
-      name: 'OAuth2 Authentication Server & Dashboard',
-      description:
-        'A simple OAuth2 Authentication Server which provides the Authorization Code Grant with/out PKCE Extension and Resource Owner Password Credentials Grant. The Dashboard features the registration of developer accout which can create new client credentials to add the OAuth2 Authentication Server to their applications.',
-      usedTechnologies: ['NestJS', 'NodeJS', 'TypeScript', 'Angular', 'SCSS'],
-      link: '#'
+      name: 'Personal Website',
+      description: `One of my occasional frontend projects is this personal website which functions as a portfolio of my personal projects.
+      The goal of this project was to build a simple minimalistic website with the new version 9 of Angular
+      and to learn more about Netlify and their hosting capabilites for Angular Applications.`,
+      usedTechnologies: ['TypeScript', 'Angular', 'SCSS', 'Netlify'],
+      link: '/projects/portfolio'
     });
   }
 

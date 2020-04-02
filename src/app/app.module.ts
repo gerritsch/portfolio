@@ -20,7 +20,8 @@ import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.componen
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { environment } from '../environments/environment';
-
+import { PortfolioComponent } from './pages/projects/portfolio/portfolio.component';
+import { LightboxModule } from 'primeng/lightbox';
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
     domain: environment.cookiedomain // it is recommended to set your domain, for cookies to work properly
@@ -50,7 +51,8 @@ const cookieConfig: NgcCookieConsentConfig = {
     FooterComponent,
     ContactComponent,
     DataPrivacyComponent,
-    ImprintComponent
+    ImprintComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +61,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     AppRoutingModule,
     FontAwesomeModule,
     CarouselModule,
+    LightboxModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgcCookieConsentModule.forRoot(cookieConfig)

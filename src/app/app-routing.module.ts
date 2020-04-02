@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
+import { PortfolioComponent } from './pages/projects/portfolio/portfolio.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'imprint',
     component: ImprintComponent
+  },
+  {
+    path: 'projects/portfolio',
+    component: PortfolioComponent
   }
 ];
 
