@@ -19,10 +19,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { environment } from '../environments/environment';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
-    domain: 'amazing-johnson-d64a3d.netlify.com/' // it is recommended to set your domain, for cookies to work properly
+    domain: environment.cookiedomain // it is recommended to set your domain, for cookies to work properly
   },
   palette: {
     popup: {
