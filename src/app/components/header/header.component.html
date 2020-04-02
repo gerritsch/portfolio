@@ -1,4 +1,18 @@
 <header>
+  <div class="lang-switch fixed-top">
+    <ul>
+      <li id="language-de">
+        <a href="/de" [class.active-language]="localeId == 'de'">
+          <span>DE</span>
+        </a>
+      </li>
+      <li id="language-en">
+        <a href="/en-US" [class.active-language]="localeId == 'en'">
+          <span>EN</span>
+        </a>
+      </li>
+    </ul>
+  </div>
   <div class="container h-100">
     <div class="row w-100 h-100">
       <div class="col align-self-center ml-3 text-center">

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about.about" datatype="html">
+        <source>ABOUT</source>
+        <target>ÜBER MICH</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">header of the about section</note>
+        <note priority="1" from="meaning">about me</note>
+      </trans-unit>
+      <trans-unit id="about.introduction" datatype="html">
+        <source>
+        Hello! I am Gerrit, a software engineer and master student of computer science based in Oldenburg, Germany. Even
+        though I often focus on building robust and scalable backend applications, I occasionaly develop frontend
+        applications for any use case.
+        <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        I am employed as a student trainee by
+        <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>embeteco GmbH &amp; Co. KG<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> since August 2017, where I primarly
+        work on backend application and software architecture in the context of IoT and Smart City. Through my work at
+        embeteco I was already exposed to several projects including:
+      </source>
+      <target>
+      Hallo! Ich bin Gerrit, ein Softwarentwickler und Masterstudent der Informatik aus Oldenburg, Deutschland. 
+      Obwohl ich fokussiert an robusten und skalierbaren Serveranwendungen arbeite, entwickle ich gelengtlich auch Webanwendungen für alle möglichen Anwendungsfälle.
+      <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+        Ich bin seit August 2017 bei <x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>embeteco GmbH &amp; Co. KG<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 
+        als Werkstudent angestellt, wo ich primär an Serverapplikationen und Softwarearchitekturen im Bereich von IoT und Smart City arbeite. Durch meine dortige Arbeit konnte
+        ich bereits an mehreren Projekten mitwirken:
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+        <note priority="1" from="meaning">meaning</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

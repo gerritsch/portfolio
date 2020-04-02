@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   faGithub = faGithub;
   faLinkedin = faLinkedin;
 
-  constructor() {}
+  constructor(@Inject(LOCALE_ID) public localeId: string) {}
 
   ngOnInit(): void {}
 }

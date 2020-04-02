@@ -10,6 +10,12 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "locales": {
+          "de": "src/locale/messages.de.xlf"
+        },
+        "sourceLocale": "en-US"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -33,6 +39,9 @@
             "scripts": ["node_modules/chart.js/dist/Chart.js"]
           },
           "configurations": {
+            "de": {
+              "localize": ["de"]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,6 +78,9 @@
             "browserTarget": "portfolio:build"
           },
           "configurations": {
+            "de": {
+              "browserTarget": "portfolio:build:de"
+            },
             "production": {
               "browserTarget": "portfolio:build:production"
             }

@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 header {
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(99, 26, 33, 1) 52%, rgba(74, 8, 43, 1) 100%);
@@ -24,5 +26,40 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+  }
+
+  .lang-switch {
+    padding: 0px !important;
+    border: 0px solid #ffffff;
+    text-align: right;
+  }
+  .lang-switch ul {
+    padding: 0px !important;
+    margin-top: 0px;
+    list-style-type: none;
+  }
+  .lang-switch ul li {
+    float: right;
+    margin: 0px 0px 0px 1px;
+    border: 0px solid;
+    text-align: center;
+  }
+  .lang-switch ul li a {
+    color: #ffffff !important;
+    background-color: #8c8c8c;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 35px 7px 7px 7px;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+  }
+
+  .lang-switch ul li a:hover {
+    transform: scaleX(2);
+  }
+
+  .active-language {
+    background-color: $accent-color !important;
   }
 }
