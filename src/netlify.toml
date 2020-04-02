@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/*"
+  to = "/de"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/en-US"
+  status = 301
+  force = false
+  query = {path = ":path"}
