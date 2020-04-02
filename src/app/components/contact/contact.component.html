@@ -9,20 +9,30 @@
         You want to talk about technology related things? Just fill out the form and get in contact with me, I would
         love to here from you!
       </p>
-      <form name="contact" method="POST" data-netlify="true">
-        <div class="form-group">
-          <label for="exampleInputEmail1">E-Mail</label>
-          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
-          <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn">
-          <fa-icon [icon]="faPaperPlane" size="lg" style="color: white;"></fa-icon> Send E-Mail
-        </button>
-      </form>
+
+      <div id="form-wrapper">
+        <form [formGroup]="contactForm" name="contact" id="contact-form" method="post" (ngSubmit)="onSubmit()">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display: none;">
+            <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
+          </p>
+          <p class="form-row">
+            <label>Your Name: </label><input type="text" name="name" formControlName="name" required />
+          </p>
+          <p class="form-row">
+            <label>Email Address: </label><input type="email" name="email" formControlName="email" required />
+          </p>
+          <p class="form-row">
+            <label>Your Message: </label
+            ><textarea id="message" name="message" formControlName="message" required></textarea>
+          </p>
+          <p id="button-row">
+            <button id="submit-button" type="submit" class="btn">
+              <fa-icon [icon]="faPaperPlane" size="lg" style="color: white;"></fa-icon> Send E-Mail
+            </button>
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 </div>
