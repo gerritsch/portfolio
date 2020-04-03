@@ -17,9 +17,7 @@ export class ContactComponent implements OnInit {
     message: new FormControl('', [Validators.required])
   });
 
-  constructor(private http: HttpClient, private toastr: ToastrService) {
-    console.log(this.contactForm);
-  }
+  constructor(private http: HttpClient, private toastr: ToastrService) {}
 
   onSubmit() {
     const body = new HttpParams()
