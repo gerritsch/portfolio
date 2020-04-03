@@ -1,8 +1,9 @@
 .ng-valid {
   border-color: green;
 }
-.ng-invalid {
-  .ng-touched {
+
+.ng-touched {
+  .input-invalid {
     border-color: red;
   }
 }
