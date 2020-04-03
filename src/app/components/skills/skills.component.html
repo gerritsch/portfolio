@@ -4,30 +4,34 @@
       <h1>PROJECTS</h1>
       <hr />
     </div>
-    <div class="col-12 align-self-center">
+    <div class="col-12 align-self-center text-center">
       <p>
         In my spare time I often develop small or bigger full-stack applications to stay up-to date with recent
         technologies and to sharpen my skills. Below is a small selection of these projects:
       </p>
 
-      <p-carousel
-        class="d-md-none"
-        verticalViewPortHeight="400px"
-        [value]="projects"
-        orientation="vertical"
-        [numVisible]="1"
-        [numScroll]="1"
-        [autoplayInterval]="5000"
-        [circular]="false"
+      <fa-icon
+        class="carousel-control-custom"
+        (click)="previousSlide()"
+        [icon]="faChevronCircleLeft"
+        size="lg"
+      ></fa-icon>
+      <carousel
+        [(activeSlide)]="activeSlideIndex"
+        [showIndicators]="true"
+        [interval]="10000"
+        [noPause]="false"
+        [pauseOnFocus]="true"
       >
-        <ng-template let-project pTemplate="item">
-          <div class="row w-100">
-            <div class="col-12 project-details">
-              <h2>{{ project.name }}</h2>
+        <slide class="col-12" *ngFor="let project of projects; index as i">
+          <div class="py-5">
+            <h2>
+              {{ project.name }}
+            </h2>
+            <div class="project-details">
               <p>
                 {{ project.description }}
               </p>
-
               <p>
                 Technologies used:
                 <b *ngFor="let tech of project.usedTechnologies; index as i"> {{ tech }}</b>
@@ -36,37 +40,16 @@
               <a href="{{ project.link }}" class="btn">Read more</a>
             </div>
           </div>
-        </ng-template>
-      </p-carousel>
+        </slide>
+      </carousel>
+      <fa-icon
+        class="carousel-control-custom mt-2"
+        (click)="nextSlide()"
+        [icon]="faChevronCircleRight"
+        size="lg"
+      ></fa-icon>
 
-      <p-carousel
-        class="d-none d-md-block"
-        verticalViewPortHeight="250px"
-        [value]="projects"
-        orientation="vertical"
-        [numVisible]="1"
-        [numScroll]="1"
-        [autoplayInterval]="5000"
-        [circular]="false"
-      >
-        <ng-template let-project pTemplate="item">
-          <div class="row w-100">
-            <div class="col-12 project-details">
-              <h2>{{ project.name }}</h2>
-              <p>
-                {{ project.description }}
-              </p>
-
-              <p>
-                Technologies used:
-                <b *ngFor="let tech of project.usedTechnologies; index as i"> {{ tech }}</b>
-              </p>
-
-              <a href="{{ project.link }}" class="btn">Read more</a>
-            </div>
-          </div>
-        </ng-template>
-      </p-carousel>
+      <br /><br /><br />
     </div>
   </div>
 </div>

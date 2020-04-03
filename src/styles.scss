@@ -45,6 +45,17 @@ p {
   background-color: $accent-color;
 }
 
-.pi-circle-on {
-  background-color: $accent-color !important;
+.carousel-indicators {
+  li {
+    background-color: $primary-color !important;
+  }
+
+  .active {
+    background-color: $accent-color !important;
+  }
+}
+
+.carousel-control {
+  color: $accent-color !important;
+  display: none;
 }

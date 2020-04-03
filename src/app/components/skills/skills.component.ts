@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faChevronCircleUp, faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-skills',
@@ -7,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+  activeSlideIndex = 0;
+  faChevronCircleLeft = faChevronCircleUp;
+  faChevronCircleRight = faChevronCircleDown;
   projects: {
     name: string;
     description: string;
@@ -23,6 +27,22 @@ export class SkillsComponent implements OnInit {
       usedTechnologies: ['TypeScript', 'Angular', 'SCSS', 'Netlify'],
       link: '/projects/portfolio'
     });
+  }
+
+  nextSlide() {
+    if (this.activeSlideIndex + 1 >= this.projects.length) {
+      this.activeSlideIndex = 0;
+    } else {
+      this.activeSlideIndex += 1;
+    }
+  }
+
+  previousSlide() {
+    if (this.activeSlideIndex - 1 < 0) {
+      this.activeSlideIndex = this.projects.length - 1;
+    } else {
+      this.activeSlideIndex -= 1;
+    }
   }
 
   ngOnInit(): void {}

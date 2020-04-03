@@ -13,7 +13,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CarouselModule } from 'primeng/carousel';
 import { ContactComponent } from './components/contact/contact.component';
 import { ToastrModule } from 'ngx-toastr';
 import { DataPrivacyComponent } from './pages/data-privacy/data-privacy.component';
@@ -22,6 +21,8 @@ import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsen
 import { environment } from '../environments/environment';
 import { PortfolioComponent } from './pages/projects/portfolio/portfolio.component';
 import { LightboxModule } from 'primeng/lightbox';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
     domain: environment.cookiedomain // it is recommended to set your domain, for cookies to work properly

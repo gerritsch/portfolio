@@ -10,3 +10,14 @@
     font-size: 15px;
   }
 }
+
+.carousel-control-custom {
+  opacity: 0.5;
+  display: inline-block;
+  color: $accent-color;
+}
+
+.carousel-control-custom:hover {
+  opacity: 1;
+  transform: scale(1.2, 1.2);
+}
