@@ -1,0 +1,41 @@
+<div class="container" id="about">
+  <div class="row w-100 justify-content-center">
+    <div class="col-12 align-self-center text-center">
+      <h1 i18n="blog|header of the blog overview section@@blog.blog">BLOG</h1>
+      <hr />
+    </div>
+    <div class="col-12 align-self-center">
+      <p>
+        Down below you will find a small curation of articles from my personal blog including technology related posts
+        but also personal development stories about myself. If you want to see all available articles click
+        <a href="/blog">here</a>.
+      </p>
+
+      <div class="row mb-3">
+        <div class="col-lg-4 col-md-12" *ngFor="let article of showArticles; index as i">
+          <div class="card">
+            <figure>
+              <img
+                src="{{ article.thumbnail.small }}"
+                class="card-img-top"
+                alt="Thumbnail"
+                title="&copy;Unsplash @pabloheimplatz"
+              />
+            </figure>
+
+            <div class="card-body">
+              <h5 class="card-title">{{ article.name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                {{ article.date.toDateString() }}
+              </h6>
+              <p class="card-text">
+                {{ article.description }}
+              </p>
+              <a href="{{ article.link }}" class="btn">Read complete article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

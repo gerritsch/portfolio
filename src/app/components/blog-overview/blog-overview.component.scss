@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+a {
+  color: $accent-color;
+}
+
+a:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+}

@@ -22,24 +22,27 @@ import { environment } from '../environments/environment';
 import { PortfolioComponent } from './pages/projects/portfolio/portfolio.component';
 import { LightboxModule } from 'primeng/lightbox';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BlogOverviewComponent } from './components/blog-overview/blog-overview.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { DailyBlogN0001Component } from './pages/blog/articles/daily-blog-n0001/daily-blog-n0001.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
-    domain: environment.cookiedomain // it is recommended to set your domain, for cookies to work properly
+    domain: environment.cookiedomain, // it is recommended to set your domain, for cookies to work properly
   },
   palette: {
     popup: {
-      background: '#404040'
+      background: '#404040',
     },
     button: {
-      background: '#ed2945'
-    }
+      background: '#ed2945',
+    },
   },
   theme: 'edgeless',
   type: 'info',
   content: {
-    message: 'By using our site, you acknowledge and accept the use of cookies.'
-  }
+    message: 'By using our site, you acknowledge and accept the use of cookies.',
+  },
 };
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ const cookieConfig: NgcCookieConsentConfig = {
     ContactComponent,
     DataPrivacyComponent,
     ImprintComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    BlogOverviewComponent,
+    BlogComponent,
+    DailyBlogN0001Component,
   ],
   imports: [
     BrowserModule,
@@ -65,9 +71,9 @@ const cookieConfig: NgcCookieConsentConfig = {
     LightboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
