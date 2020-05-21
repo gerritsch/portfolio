@@ -14,6 +14,11 @@ body {
   color: $primary-color;
 }
 
+.col-12 {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
 a {
   color: $accent-color;
 }
@@ -25,6 +30,7 @@ a:hover {
 
 p {
   font-size: 20px;
+  text-align: justify;
 }
 
 .footer {
