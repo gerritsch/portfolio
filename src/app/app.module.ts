@@ -22,9 +22,6 @@ import { environment } from '../environments/environment';
 import { PortfolioComponent } from './pages/projects/portfolio/portfolio.component';
 import { LightboxModule } from 'primeng/lightbox';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { BlogOverviewComponent } from './components/blog-overview/blog-overview.component';
-import { BlogComponent } from './pages/blog/blog.component';
-import { DailyBlogN0001Component } from './pages/blog/articles/daily-blog-n0001/daily-blog-n0001.component';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
@@ -57,9 +54,6 @@ const cookieConfig: NgcCookieConsentConfig = {
     DataPrivacyComponent,
     ImprintComponent,
     PortfolioComponent,
-    BlogOverviewComponent,
-    BlogComponent,
-    DailyBlogN0001Component,
   ],
   imports: [
     BrowserModule,
